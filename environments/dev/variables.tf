@@ -24,7 +24,7 @@ variable "synthetic_settings" {
       name = "healthcheck-monitoring"
     }
     functions = {
-      name        = "healthcheck-monitoring"
+      name        = "health-checker"
       bucket_name = "synthetic-sample"
       file_name   = "functions.zip"
     }
