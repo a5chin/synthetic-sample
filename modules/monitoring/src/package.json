@@ -1,0 +1,13 @@
+{
+  "name": "synthetic_monitoring",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
+    "@google-cloud/synthetics-sdk-api": "^0.1.0",
+    "dotenv": "^16.3.1",
+    "google-auth-library": "^9.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "main": "index.js"
+}
