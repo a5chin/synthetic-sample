@@ -4,7 +4,7 @@ resource "google_monitoring_alert_policy" "uptime" {
   conditions {
     display_name = "Failure of uptime ${var.run_info.name}"
     condition_threshold {
-      filter = "resource.type = \"cloud_run_revision\" AND resource.labels.service_name = \"${var.run_info.name}\" AND metric.type = \"monitoring.googleapis.com/uptime_check/check_passed\""
+      filter = "resource.type = \"cloud_run_revision\" AND resource.labels.service_name = \"${google_cloudfunctions2_function.synthetic_monitoring.name}\" AND metric.type = \"monitoring.googleapis.com/uptime_check/check_passed\""
       aggregations {
         alignment_period     = var.synthetic_settings.monitoring.period
         cross_series_reducer = "REDUCE_COUNT_FALSE"

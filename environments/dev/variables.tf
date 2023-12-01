@@ -19,7 +19,7 @@ variable "run" {
 
 variable "synthetic_settings" {
   description = "Settings for Synthetic Monitoring"
-  default     = {
+  default = {
     monitoring = {
       name = "healthcheck-monitoring"
     }
